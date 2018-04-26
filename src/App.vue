@@ -5,17 +5,25 @@
       <h1>WO</h1>
       <h1>RK</h1>
     </div>
-    <scroller></scroller>
+    <scroller :content="content"></scroller>
+    <scroller-indicator :content="content"></scroller-indicator>
     <router-view/>
   </div>
 </template>
 
 <script>
-  import Scroll from './components/scroll/scroller.vue'
+import Scroller from './components/scroll/scroller.vue'
+import ScrollerIndicator from './components/scroll/scrollerIndicator.vue'
 export default {
   name: 'App',
+  data(){
+    return{
+      content:[1,2,3,4,5,7,3,5,2]
+    }
+  },
   components:{
-    scroller:Scroll
+    scroller:Scroller,
+    scrollerIndicator:ScrollerIndicator
   }
 }
 </script>
@@ -30,7 +38,7 @@ export default {
   @font-face{font-family:Montserrat;font-weight:700;src:local("assets/font/Montserrat-Bold.tff")}
   @font-face{font-family:Montserrat;font-weight:800;src:local("assets/font/Montserrat-ExtraBold.tff")}
   @font-face{font-family:Montserrat;font-weight:900;src:local("assets/font/Montserrat-Black.tff")}
-  body{background:#333;margin:0;-webkit-font-smoothing:antialiased}
+  body{background:#333;margin:0;-webkit-font-smoothing:antialiased;overflow: hidden;}
   #logo{top:32px;left:32px;position:absolute}
   #logo h1{font:600 28px/32px Montserrat;color:#fff;margin:0}
 </style>
