@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <div class="indicator" v-if="show" :style="{marginTop: -content.length*16+48+'px'}">
-      <div class="index" :class="{active: currentIndex == i}" v-for="(c, i) in content">{{c}}</div>
-    </div>
+  <div id="indicator" v-if="show" :style="{marginTop: -content.length*16+48+'px'}">
+    <div class="index" :class="{active: currentIndex == i}" v-for="(c, i) in content">{{c}}</div>
   </div>
 </template>
 
@@ -33,7 +31,7 @@
 </script>
 
 <style>
-  .indicator{position: absolute;left:32px;top:50%;}
+  #indicator{position: absolute;left:32px;top:50%;}
   .index{font:300 18px/32px Montserrat;color:#fff;}
   .active{font-weight: 900;font-size:24px;}
 </style>

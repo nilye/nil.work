@@ -44,8 +44,8 @@
         else if (window.innerWidth >= 960) this.ovalRadius = 180
         else if (window.innerWidth >= 600) this.ovalRadius = 112
         else this.ovalRadius = 60
-        this.scroll.base = this.ovalRadius + this.gap
-        this.scroll.bot = window.innerHeight - (this.content.length-1)*(this.ovalRadius+this.gap)
+        this.scroll.base = -this.gap
+        this.scroll.bot = window.innerHeight - (this.content.length+1)*(this.ovalRadius+this.gap)
       },
       position(i){
         if(i % 2 == 0){
