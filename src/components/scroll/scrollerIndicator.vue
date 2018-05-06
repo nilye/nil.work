@@ -30,7 +30,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   #indicator{position: absolute;left:32px;top:50%;}
   .index{font:300 18px/32px Montserrat;color:#fff;}
   .active{font-weight: 900;font-size:24px;}

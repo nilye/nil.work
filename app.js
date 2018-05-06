@@ -32,7 +32,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-var port = '3000'
+var port = (process.env.PORT || '80');
 app.set('port', port);
 
 var server = http.createServer(app);
