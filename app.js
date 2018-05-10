@@ -1,9 +1,9 @@
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var bodyParser = require('body-parser');
-var http = require('http');
-var app = express();
+let express = require('express');
+let path = require('path');
+let logger = require('morgan');
+let bodyParser = require('body-parser');
+let http = require('http');
+let app = express();
 app.use(logger('dev'));
 
 app.use(bodyParser.json());
@@ -11,12 +11,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // routes
-var index = require('./routes/index');
+let index = require('./routes/index');
 app.use('/', index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
@@ -32,8 +32,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-var port = (process.env.PORT || '80');
+let port = (process.env.PORT || '80');
 app.set('port', port);
 
-var server = http.createServer(app);
+let server = http.createServer(app);
 server.listen(port);
