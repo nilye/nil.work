@@ -12,6 +12,7 @@
   "dependencies": {
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "express-subdomain": "~1.0.5",
     "body-parser": "~1.17.1",
     "debug": "~2.6.3",
     "express": "~4.15.2",

@@ -8,7 +8,7 @@
     <scroller :content="content"></scroller>
     <scroller-indicator :content="content"></scroller-indicator>
     <side-nav></side-nav>
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
 
