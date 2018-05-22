@@ -37,15 +37,15 @@ export default {
 <style lang="scss">
   @import "../static/font/MaterialIcons/material-icons.css";
   .material-icons{color:#fff;}
-  @font-face{font-family:Montserrat;font-weight:100;src:local("../static/font/Montserrat/Montserrat-Thin.tff")}
-  @font-face{font-family:Montserrat;font-weight:200;src:local("../static/font/Montserrat/Montserrat-ExtraLight.tff")}
-  @font-face{font-family:Montserrat;font-weight:300;src:local("../static/font/Montserrat/Montserrat-Light.tff")}
-  @font-face{font-family:Montserrat;font-weight:400;src:local("../static/font/Montserrat/Montserrat-Regular.tff")}
-  @font-face{font-family:Montserrat;font-weight:500;src:local("../static/font/Montserrat/Montserrat-Medium.tff")}
-  @font-face{font-family:Montserrat;font-weight:600;src:local("../static/font/Montserrat/Montserrat-SemiBold.tff")}
-  @font-face{font-family:Montserrat;font-weight:700;src:local("../static/font/Montserrat/Montserrat-Bold.tff")}
-  @font-face{font-family:Montserrat;font-weight:800;src:local("../static/font/Montserrat/Montserrat-ExtraBold.tff")}
-  @font-face{font-family:Montserrat;font-weight:900;src:local("../static/font/Montserrat/Montserrat-Black.tff")}
+  @font-face{font-family:Montserrat;font-weight:100;src:url("../static/font/Montserrat/Montserrat-Thin.ttf")}
+  @font-face{font-family:Montserrat;font-weight:200;src:url("../static/font/Montserrat/Montserrat-ExtraLight.ttf")}
+  @font-face{font-family:Montserrat;font-weight:300;src:url("../static/font/Montserrat/Montserrat-Light.ttf")}
+  @font-face{font-family:Montserrat;font-weight:400;src:url("../static/font/Montserrat/Montserrat-Regular.ttf")}
+  @font-face{font-family:Montserrat;font-weight:500;src:url("../static/font/Montserrat/Montserrat-Medium.ttf")}
+  @font-face{font-family:Montserrat;font-weight:600;src:url("../static/font/Montserrat/Montserrat-SemiBold.ttf")}
+  @font-face{font-family:Montserrat;font-weight:700;src:url("../static/font/Montserrat/Montserrat-Bold.ttf")}
+  @font-face{font-family:Montserrat;font-weight:800;src:url("../static/font/Montserrat/Montserrat-ExtraBold.ttf")}
+  @font-face{font-family:Montserrat;font-weight:900;src:url("../static/font/Montserrat/Montserrat-Black.ttf")}
   @font-face{font-family:Noto Sans SC;font-weight:100;src:url("../static/font/NotoSansSC/NotoSansSC-Thin.otf")}
   @font-face{font-family:Noto Sans SC;font-weight:200;src:url("../static/font/NotoSansSC/NotoSansSC-Light.otf")}
   @font-face{font-family:Noto Sans SC;font-weight:300;src:url("../static/font/NotoSansSC/NotoSansSC-DemiLight.otf")}
@@ -56,4 +56,6 @@ export default {
   body{background:#333;margin:0;-webkit-font-smoothing:antialiased;overflow: hidden;}
   #logo{top:32px;left:32px;position:absolute}
   #logo h1{font:600 28px/32px Montserrat;color:#fff;margin:0}
+  a{text-decoration: none;}
+  .noselect{-webkit-touch-callout: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 </style>

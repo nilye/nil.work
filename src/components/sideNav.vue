@@ -1,11 +1,11 @@
 <template>
   <div id="side-nav">
-    <div class="icon">
+    <router-link class="icon" to="/about">
       <i class="material-icons">account_circle</i>
-    </div>
-    <div class="icon">
+    </router-link>
+    <a class="icon" to="mailto:entaroalsace@gmail.com?subject=From Nil.work">
       <i class="material-icons">email</i>
-    </div>
+    </a>
   </div>
 </template>
 

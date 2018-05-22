@@ -20,17 +20,18 @@ app.use(function(req, res, next){
 });
 // sub domain
 var subdomain = require('express-subdomain')
-var cfyeRoute = require('./routes/cfye')
-app.use(subdomain('cfye', cfyeRoute))
+
 
 //static dir
 app.use(express.static(path.join(__dirname, 'dist')));
 
 //index route
-var index = require('./routes/index');
-app.use('/', index);
+app.use(function(req, res){
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
+});
 
-var port = (process.env.PORT || '80');
+// var port = (process.env.PORT || '80');
+var port = (process.env.PORT || '3000');
 app.set('port', port);
 
 var server = http.createServer(app);
