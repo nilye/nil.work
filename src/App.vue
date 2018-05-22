@@ -56,4 +56,6 @@ export default {
   body{background:#333;margin:0;-webkit-font-smoothing:antialiased;overflow: hidden;}
   #logo{top:32px;left:32px;position:absolute}
   #logo h1{font:600 28px/32px Montserrat;color:#fff;margin:0}
+  a{text-decoration: none;}
+  .noselect{-webkit-touch-callout: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 </style>
