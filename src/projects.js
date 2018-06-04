@@ -1,5 +1,14 @@
 export const ProjPath = '/index/static/proj';
 export const Projects = [{
+  id:'commatubeSchoolProj',
+  name:'Commatube Portfolio',
+  title:'Commatube  (as School Project)',
+  label:'C',
+  context:'Commatube allows the comments of the video to be displayed while the associated video segment is playing. This allows comments to respond directly to events occurring in the video and in sync with the viewer in order to creat a sense of a shared watching experience.',
+  links:{},
+  tools:['sketch'],
+  images:['tn.jpg','1.jpg']
+},{
   id:'afa',
   name:'AFA Web Redesign',
   title:'AFA Web Redesign',
@@ -55,15 +64,6 @@ export const Projects = [{
   tools:['angular','nodejs','firebase','heroku'],
   images:['tn.png','1.jpg','2.jpg']
 },{
-  id:'commatubeSchoolProj',
-  name:'Commatube Portfolio',
-  title:'Commatube  (as School Project)',
-  label:'C',
-  context:'Commatube allows the comments of the video to be displayed while the associated video segment is playing. This allows comments to respond directly to events occurring in the video and in sync with the viewer in order to creat a sense of a shared watching experience.',
-  links:{},
-  tools:['sketch'],
-  images:['tn.jpg','1.jpg']
-},{
   id:'league',
   name:'League',
   title:'League - an op.gg clone',
@@ -101,14 +101,14 @@ export const Projects = [{
   name:'Azure Media Server',
   title:'Azure Media Server Demo',
   label:'V',
-  context:`A video server demo built for Commatube based on Microsoft's Azure which is able to upload, fetch, play and analysis videos, and is going to mount on Commatube. It is a more server-side focused project and works by calling several REST APIs of Microsoft's Azure Media Server, Blob storage, and CDN. Besides, it can adapt to other video server use cases. `,
+  context:`A video server demo built for Commatube based on Microsoft's Azure which is able to upload, fetch, play and analysis videos, and is going to mount on Commatube. It is a more server-side focused project and works by calling several REST APIs of Microsoft's Azure Media Server, Blob storage, and CDN. Besides, it can adapt to other video server use cases, and I shared the github files so that people can know and learn how I did it.`,
   showContext:true,
   links:{
     web:'http://ams.nil.work',
     github:'https://github.com/nilye/commatube-AMS-demo'
   },
   tools:['azure','ams','nodejs','angular'],
-  images:['tn.png']
+  images:['tn.png','0.png','1.png']
 },{
   id:'angularUIPipes',
   name:'Angular UI Pipe',
@@ -136,3 +136,8 @@ export default {
     return imgList
   }
 }
+
+999 SHILONG RD., BUILDING NO.10, Apt 1701
+
+上海市徐汇区石龙路999弄10号1701室 叶欣洲收
+Xuhui District, Shanghai

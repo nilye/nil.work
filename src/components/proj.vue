@@ -20,6 +20,7 @@
     <div class="content">
       <img v-for="img in images.slice(1)" :src="img">
     </div>
+    <div id="code"></div>
   </div>
 </template>
 
@@ -41,13 +42,13 @@
         this.project = Projects.getProject(this.id)
       }
     },
-    created(){
+    created: function () {
       this.id = this.$route.params.id
       this.project = Projects.getProject(this.id)
       this.images = Projects.allImages(this.id)
-      setTimeout(()=>{
+      setTimeout(() => {
         this.compIsCreated = true
-      },600)
+      }, 600)
     }
   }
 </script>
