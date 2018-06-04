@@ -1,61 +1,31 @@
 <template>
   <div id="app">
-    <div id="logo">
+    <router-link id="logo" to="/">
       <h1>NIL</h1>
       <h1>WO</h1>
       <h1>RK</h1>
-    </div>
-    <scroller :content="content"></scroller>
-    <scroller-indicator :content="content"></scroller-indicator>
+    </router-link>
+    <back-btn :class="{hideIndicator:activeProj == null,scrollIsAnimating:isAnimating}">
+      <i class="material-icons">keyboard_backspace</i>
+    </back-btn>
+    <about :class="{hideAbout: !isAboutPage}"></about>
+    <scroller :class="{slideDown:isAboutPage,scrollIsAnimating:isAnimating}" :projects="projects" :activeProj="activeProj"></scroller>
+    <scroller-indicator :class="{slideDown:isAboutPage,scrollIsAnimating:isAnimating}" :projects="projects"></scroller-indicator>
     <side-nav></side-nav>
     <router-view></router-view>
   </div>
 </template>
 
-<script>
-import Scroller from './components/scroll/scroller.vue'
-import ScrollerIndicator from './components/scroll/scrollerIndicator.vue'
-import SideNav from './components/sideNav.vue'
-export default {
-  name: 'App',
-  data(){
-    return{
-      content:[1,2,3,4,5,7,3,5,2]
-    }
-  },
-  methods:{
-
-  },
-  components:{
-    scroller:Scroller,
-    scrollerIndicator:ScrollerIndicator,
-    sideNav: SideNav
-  }
-}
-</script>
+<script src="./App.js"></script>
 
 <style lang="scss">
-  @import "../static/font/MaterialIcons/material-icons.css";
-  .material-icons{color:#fff;}
-  @font-face{font-family:Montserrat;font-weight:100;src:url("../static/font/Montserrat/Montserrat-Thin.ttf")}
-  @font-face{font-family:Montserrat;font-weight:200;src:url("../static/font/Montserrat/Montserrat-ExtraLight.ttf")}
-  @font-face{font-family:Montserrat;font-weight:300;src:url("../static/font/Montserrat/Montserrat-Light.ttf")}
-  @font-face{font-family:Montserrat;font-weight:400;src:url("../static/font/Montserrat/Montserrat-Regular.ttf")}
-  @font-face{font-family:Montserrat;font-weight:500;src:url("../static/font/Montserrat/Montserrat-Medium.ttf")}
-  @font-face{font-family:Montserrat;font-weight:600;src:url("../static/font/Montserrat/Montserrat-SemiBold.ttf")}
-  @font-face{font-family:Montserrat;font-weight:700;src:url("../static/font/Montserrat/Montserrat-Bold.ttf")}
-  @font-face{font-family:Montserrat;font-weight:800;src:url("../static/font/Montserrat/Montserrat-ExtraBold.ttf")}
-  @font-face{font-family:Montserrat;font-weight:900;src:url("../static/font/Montserrat/Montserrat-Black.ttf")}
-  @font-face{font-family:Noto Sans SC;font-weight:100;src:url("../static/font/NotoSansSC/NotoSansSC-Thin.otf")}
-  @font-face{font-family:Noto Sans SC;font-weight:200;src:url("../static/font/NotoSansSC/NotoSansSC-Light.otf")}
-  @font-face{font-family:Noto Sans SC;font-weight:300;src:url("../static/font/NotoSansSC/NotoSansSC-DemiLight.otf")}
-  @font-face{font-family:Noto Sans SC;font-weight:400;src:url("../static/font/NotoSansSC/NotoSansSC-Regular.otf")}
-  @font-face{font-family:Noto Sans SC;font-weight:500;src:url("../static/font/NotoSansSC/NotoSansSC-Medium.otf")}
-  @font-face{font-family:Noto Sans SC;font-weight:600;src:url("../static/font/NotoSansSC/NotoSansSC-Bold.otf")}
-  @font-face{font-family:Noto Sans SC;font-weight:700;src:url("../static/font/NotoSansSC/NotoSansSC-Black.otf")}
-  body{background:#333;margin:0;-webkit-font-smoothing:antialiased;overflow: hidden;}
-  #logo{top:32px;left:32px;position:absolute}
-  #logo h1{font:600 28px/32px Montserrat;color:#fff;margin:0}
-  a{text-decoration: none;}
-  .noselect{-webkit-touch-callout: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+  @import 'styles.scss';
+  @import 'fonts.scss';
+  #logo{top:32px;left:32px;position:fixed;z-index: 10;}
+  #logo h1{font:800 28px/32px Raleway;margin:0}
+  .slideDown{transform: translateY(120%);top: 120% !important;}
+  /*.fade{opacity: 0;transform: scale(1.07)}*/
+  .scrollIsAnimating{transition: 0.5s ease-in-out !important;}
+  .hideAbout{top:-120% !important;}
+  .hideIndicator{opacity: 0;pointer-events: none;}
 </style>
