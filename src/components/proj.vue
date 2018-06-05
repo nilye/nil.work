@@ -41,7 +41,7 @@
         this.project = Projects.getProject(this.id)
       }
     },
-    created: function () {
+    created() {
       this.id = this.$route.params.id
       this.project = Projects.getProject(this.id)
       this.images = Projects.allImages(this.id)
