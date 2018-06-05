@@ -15,12 +15,11 @@
           </a>
         </div>
       </div>
-      <p>{{project.context}}</p>
+      <p v-html="project.context"></p>
     </div>
     <div class="content">
       <img v-for="img in images.slice(1)" :src="img">
     </div>
-    <div id="code"></div>
   </div>
 </template>
 

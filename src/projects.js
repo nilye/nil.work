@@ -89,13 +89,22 @@ export const Projects = [{
   name:'Commatube',
   title:'Commatube',
   label:'C',
-  context:'',
+  context:`
+  <br>
+  😜🤪😆🤟🤟🤟
+  <br>
+  <a href="http://commatube.com" target="_blank" style="color:#ff4f65;text-decoration: underline;font-size: 28px;">http://commatube.com</a> 
+  <br><span style="font-size: 12px;">*Require VPN, if you're in China.</span>
+  <br><br/>
+  Commatube started with one of my school project. I was trying to adapt the popular Chinese 'danmu' video watching feature in the US. When I begin running Commatube as a startup Project. I established a team of 4 people and dedicated all my passion. We start to brand it as a video playground that allows people to engage and send time-stamped comments on youtube videos. I play a role as founder and full-stack web developer.
+  `,
   showContext:true,
   links:{
-    web:'http://commatube.com'
+    web:'http://commatube.com',
+    github:'https://github.com/nilye/commatube-md'
   },
   tools:['angular','nodejs','mongoDB','googleCloud','nginx','youtube','giphy'],
-  images:['commatube.png']
+  images:['tn.png','1.png']
 },{
   id:'ams',
   name:'Azure Media Server',
@@ -136,8 +145,3 @@ export default {
     return imgList
   }
 }
-
-999 SHILONG RD., BUILDING NO.10, Apt 1701
-
-上海市徐汇区石龙路999弄10号1701室 叶欣洲收
-Xuhui District, Shanghai
