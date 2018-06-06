@@ -1,5 +1,5 @@
 <template>
-  <a id="back-home" @click="goBack()">
+  <a class="back-home" @click="goBack()">
     <i class="material-icons">keyboard_backspace</i>
   </a>
 </template>
@@ -16,5 +16,5 @@
 </script>
 
 <style lang="scss" scoped>
-  #back-home{position:fixed;left:32px;top:144px;cursor: pointer;}
+  .back-home{position:fixed;left:32px;top:144px;cursor: pointer;}
 </style>

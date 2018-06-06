@@ -4,7 +4,9 @@ body{background:#FDFDFD;margin:0;-webkit-font-smoothing:antialiased;color:$pri;f
 a, a:visited, a:link, a:active{text-decoration: none;color:inherit;}
 .noselect{-webkit-touch-callout: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 @mixin shadow($lvl){
-  @if $lvl == 2{
+  @if $lvl == 0 {
+    box-shadow: none;
+  } @else if $lvl == 2{
     box-shadow: 0 20px 40px rgba(0,0,0,0.02), 0 30px 32px rgba(0,0,0,0.03);
   } @else if $lvl == 5 {
     box-shadow: 0 38px 76px rgba(0,0,0,0.1), 0 30px 60px rgba(0,0,0,0.08);

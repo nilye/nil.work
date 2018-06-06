@@ -66,7 +66,8 @@
       },
       gap(){
         // return (this.tnRadius*3)/Math.sqrt(3)-this.tnRadius
-        return this.tnRadius/2
+        if (window.innerWidth <= 600) return this.tnRadius/3
+        else return this.tnRadius/2
       }
     },
     methods:{
@@ -81,7 +82,7 @@
         this.scroll.bot = window.innerHeight - (this.projects.length+1)*(this.tnRadius+this.gap)
       },
       position(index,id){
-        let gapV = (this.tnRadius+this.tnRadius/2)*Math.sqrt(3)*0.5 - this.tnRadius
+        let gapV = (this.tnRadius+this.gap)*Math.sqrt(3)*0.5 - this.tnRadius
         if (this.activeProj == id){
           return {left:'50%',top:'72px'}
         } else {
@@ -117,7 +118,14 @@
   .tn:hover img{@include shadow(5);}
   .isAnimating{position:fixed !important;}
   .active{width:calc( 100vw - 208px ) !important;max-width:960px;border-radius:0 !important;pointer-events: none;transform: scale(1) translateX(-50%) !important;opacity: 1!important;}
-  .active img{width:100% !important;height: auto !important;border-radius: 0 !important;z-index: 1;box-shadow:none;}
+  .active img{width:100% !important;height: auto !important;border-radius: 0 !important;z-index: 1;box-shadow:none;@include shadow(0)}
   .deactive{opacity: 0;transform: scale(0.8);z-index: -1;pointer-events: none;}
   //.active{left:-50vw !important;top:-50vw !important;width:200vw !important;height: 200vh !important;}
+
+  //mobile responsive
+  @media (max-width: 600px){
+    .active{width: calc(100vw - 80px) !important;transform: translate(0) !important;left:56px !important;top:32px !important;}
+    .tn:hover img{@include shadow(0);}
+    .active img{@include shadow(0);}
+  }
 </style>

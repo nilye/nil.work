@@ -123,7 +123,8 @@ export const Projects = [{
   name:'Angular UI Pipe',
   title:'Angular UI Pipe Library',
   label:'A',
-  context:'',
+  context:`Dealing with raw data is annoying, and legibility is always required. On the other hand, there are several angular lib that help developer convert raw data into human-friendly format, for example to convert a timestamp into how much time ago from now. However, they are not complete and cannot help out all scenarios, and there are still more problems haven't been solved yet. Therefore, I began with this angular library which is a angular tools collection of as much tools for different scenarios as possible.`,
+  showContext: true,
   links:{},
   tools:['npm','angular','nodejs'],
   images:['tn.png']

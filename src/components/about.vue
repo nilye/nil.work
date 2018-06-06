@@ -36,14 +36,17 @@
   .bio{flex:1;margin-bottom: 32px;}
   .portrait{width:200px;height: 200px;margin-left: 80px;border-radius: 50%;}
   .portrait img{position:absolute;top:50%;margin-top:-100px;width:200px;height: 200px;border-radius: 50%;@include shadow(5)}
+  .about-website{position: absolute;bottom: -120px;margin-left: -110px;left: 50%;}
   @media (max-width:960px){
-    .about{display: block;flex-direction: row;}
+    .about{width: calc(100vw - 160px);margin-left:16px;}
+    .about-wrap{display: block;flex-direction: column;}
     .portrait{margin-left:0;}
     .portrait img{top:0;margin-top:0;position: relative;}
+    .bio p{font-size:13px;}
+    .about-website{bottom: -80px;font-size:11px;}
   }
   h1{font-weight: 600;font-size: 48px;}
   h1 span{font-family: Raleway;}
   p{font-size:18px;margin:12px 0;}
 
-  .about-website{position: absolute;bottom: -120px;margin-left: -110px;left: 50%;}
 </style>
