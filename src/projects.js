@@ -70,7 +70,9 @@ export const Projects = [{
   label:'L',
   context:'A project of op.gg (insight and data service for League of Legend) clone.',
   showContext:true,
-  links:{},
+  links:{
+    website:'https://lol.alexzhuis.me/'
+  },
   tools:['angular','nodejs','riot'],
   imagePath:'/league/',
   images:['tn.png']
@@ -123,9 +125,11 @@ export const Projects = [{
   name:'Angular UI Pipe',
   title:'Angular UI Pipe Library',
   label:'A',
-  context:`Dealing with raw data is annoying, and legibility is always required. On the other hand, there are several angular lib that help developer convert raw data into human-friendly format, for example to convert a timestamp into how much time ago from now. However, they are not complete and cannot help out all scenarios, and there are still more problems haven't been solved yet. Therefore, I began with this angular library which is a angular tools collection of as much tools for different scenarios as possible.`,
+  context:`Dealing with raw data is annoying, and legibility of UI is always required. Although, there are several angular libs that help developer convert raw data into a human-friendly format which for example, to convert a timestamp into how much time ago from now, they are not complete and cannot help out all scenarios, and there are still more problems haven't been solved yet. Therefore, I began this open-source project which is a collection of as many tools for different raw data converting scenarios as possible.<br>Coming soon, still working on it...`,
   showContext: true,
-  links:{},
+  links:{
+    github:'https://github.com/nilye/angular-ui-pipes'
+  },
   tools:['npm','angular','nodejs'],
   images:['tn.png']
 }];

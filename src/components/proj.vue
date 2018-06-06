@@ -65,8 +65,8 @@
   .content img{width: 100%;margin-top:-8px;}
   //mobile responsive
   @media (max-width:600px){
-    .proj{margin-left:80px;width:calc( 100vw - 80px);margin-top:24px;}
-    .header-img{width:calc( 100vw - 80px)}
+    .proj{margin-left:80px;width:calc( 100vw - 104px );margin-top:24px;}
+    .header-img{width:calc( 100vw - 104px)}
     .header-content h1{font-size:32px;line-height: 56px;}
     .header-content p{font-size:16px;}
   }

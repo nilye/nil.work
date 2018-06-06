@@ -124,7 +124,7 @@
 
   //mobile responsive
   @media (max-width: 600px){
-    .active{width: calc(100vw - 80px) !important;transform: translate(0) !important;left:56px !important;top:32px !important;}
+    .active{width: calc(100vw - 104px) !important;transform: translate(0) !important;left:56px !important;top:32px !important;}
     .tn:hover img{@include shadow(0);}
     .active img{@include shadow(0);}
   }
